@@ -1,0 +1,95 @@
+{
+  "tool": "built-in image_gen",
+  "entries": [
+    {
+      "slug": "pediatrics",
+      "specialty": "소아청소년과",
+      "prompt": "Use case: stylized-concept. Asset type: square animal doctor character illustration for a playful Korean quiz result card. Single character: a warm bear pediatrician holding a tiny teddy bear. Style: adorable chubby chibi animal, large rounded head, small body, tiny dot eyes, soft rounded dark brown outlines, flat pastel colors with subtle paper texture, friendly collectible sticker illustration, cream white coat unless scrubs specified. Full body centered with generous 12% margin, very simple pure ivory background, no text, no letters, no watermark, no logo, no border, no human, no realistic anatomy, no blood. Readable at 200px. Square composition.",
+      "source": "/Users/drshin/.codex/generated_images/01a10564-f65f-7e73-a23b-f85851185f6c/exec-b1185bbf-bca8-4b7b-a7f2-45072872aeab.png"
+    },
+    {
+      "slug": "psychiatry",
+      "specialty": "정신건강의학과",
+      "prompt": "Use case: stylized-concept. Asset type: square animal doctor character illustration for a playful Korean quiz result card. Single character: a gentle capybara psychiatrist holding a small notebook, listening kindly. Style: adorable chubby chibi animal, large rounded head, small body, tiny dot eyes, soft rounded dark brown outlines, flat pastel colors with subtle paper texture, friendly collectible sticker illustration, cream white coat unless scrubs specified. Full body centered with generous 12% margin, very simple pure ivory background, no text, no letters, no watermark, no logo, no border, no human, no realistic anatomy, no blood. Readable at 200px. Square composition.",
+      "source": "/Users/drshin/.codex/generated_images/01a10564-f65f-7e73-a23b-f85851185f6c/exec-9f133bd7-8871-447b-81b1-8d9e09011f06.png"
+    },
+    {
+      "slug": "family",
+      "specialty": "가정의학과",
+      "prompt": "Use case: stylized-concept. Asset type: square animal doctor character illustration for a playful Korean quiz result card. Single character: a cheerful golden retriever family doctor wearing a stethoscope. Style: adorable chubby chibi animal, large rounded head, small body, tiny dot eyes, soft rounded dark brown outlines, flat pastel colors with subtle paper texture, friendly collectible sticker illustration, cream white coat unless scrubs specified. Full body centered with generous 12% margin, very simple pure ivory background, no text, no letters, no watermark, no logo, no border, no human, no realistic anatomy, no blood. Readable at 200px. Square composition.",
+      "source": "/Users/drshin/.codex/generated_images/01a10564-f65f-7e73-a23b-f85851185f6c/exec-c37073f0-a971-4926-94e4-2b00ce8dc26e.png"
+    },
+    {
+      "slug": "rehab",
+      "specialty": "재활의학과",
+      "prompt": "Use case: stylized-concept. Asset type: square animal doctor character illustration for a playful Korean quiz result card. Single character: an encouraging otter rehabilitation doctor holding an exercise ball. Style: adorable chubby chibi animal, large rounded head, small body, tiny dot eyes, soft rounded dark brown outlines, flat pastel colors with subtle paper texture, friendly collectible sticker illustration, cream white coat unless scrubs specified. Full body centered with generous 12% margin, very simple pure ivory background, no text, no letters, no watermark, no logo, no border, no human, no realistic anatomy, no blood. Readable at 200px. Square composition.",
+      "source": "/Users/drshin/.codex/generated_images/01a10564-f65f-7e73-a23b-f85851185f6c/exec-2a6232d5-9d91-4416-870e-ec5c613734f5.png"
+    },
+    {
+      "slug": "radiology",
+      "specialty": "영상의학과",
+      "prompt": "Use case: stylized-concept. Asset type: square animal doctor character illustration for a playful Korean quiz result card. Single character: an observant owl radiologist holding a blue simple x-ray film. Style: adorable chubby chibi animal, large rounded head, small body, tiny dot eyes, soft rounded dark brown outlines, flat pastel colors with subtle paper texture, friendly collectible sticker illustration, cream white coat unless scrubs specified. Full body centered with generous 12% margin, very simple pure ivory background, no text, no letters, no watermark, no logo, no border, no human, no realistic anatomy, no blood. Readable at 200px. Square composition.",
+      "source": "/Users/drshin/.codex/generated_images/01a10564-f65f-7e73-a23b-f85851185f6c/exec-16c0da47-a419-44d3-bd20-ce5988abe1f6.png"
+    },
+    {
+      "slug": "pathology",
+      "specialty": "병리과",
+      "prompt": "Use case: stylized-concept. Asset type: square animal doctor character illustration for a playful Korean quiz result card. Single character: a curious fox pathologist beside a small microscope. Style: adorable chubby chibi animal, large rounded head, small body, tiny dot eyes, soft rounded dark brown outlines, flat pastel colors with subtle paper texture, friendly collectible sticker illustration, cream white coat unless scrubs specified. Full body centered with generous 12% margin, very simple pure ivory background, no text, no letters, no watermark, no logo, no border, no human, no realistic anatomy, no blood. Readable at 200px. Square composition.",
+      "source": "/Users/drshin/.codex/generated_images/01a10564-f65f-7e73-a23b-f85851185f6c/exec-1f47438d-c7c5-44c9-9535-6facfee79d91.png"
+    },
+    {
+      "slug": "surgery",
+      "specialty": "외과",
+      "prompt": "Use case: stylized-concept. Asset type: square animal doctor character illustration for a playful Korean quiz result card. Single character: a confident tiger surgeon in teal scrubs and surgical cap, no tools. Style: adorable chubby chibi animal, large rounded head, small body, tiny dot eyes, soft rounded dark brown outlines, flat pastel colors with subtle paper texture, friendly collectible sticker illustration, cream white coat unless scrubs specified. Full body centered with generous 12% margin, very simple pure ivory background, no text, no letters, no watermark, no logo, no border, no human, no realistic anatomy, no blood. Readable at 200px. Square composition.",
+      "source": "/Users/drshin/.codex/generated_images/01a10564-f65f-7e73-a23b-f85851185f6c/exec-a3c9f519-7dea-4867-883c-76681854d911.png"
+    },
+    {
+      "slug": "emergency",
+      "specialty": "응급의학과",
+      "prompt": "Use case: stylized-concept. Asset type: square animal doctor character illustration for a playful Korean quiz result card. Single character: an energetic cheetah emergency doctor with a small medical bag without symbols. Style: adorable chubby chibi animal, large rounded head, small body, tiny dot eyes, soft rounded dark brown outlines, flat pastel colors with subtle paper texture, friendly collectible sticker illustration, cream white coat unless scrubs specified. Full body centered with generous 12% margin, very simple pure ivory background, no text, no letters, no watermark, no logo, no border, no human, no realistic anatomy, no blood. Readable at 200px. Square composition.",
+      "source": "/Users/drshin/.codex/generated_images/01a10564-f65f-7e73-a23b-f85851185f6c/exec-4b86befe-ee21-4d06-9392-710f3e63f19c.png"
+    },
+    {
+      "slug": "internal",
+      "specialty": "내과",
+      "prompt": "Use case: stylized-concept. Asset type: square animal doctor character illustration for a playful Korean quiz result card. Single character: a reassuring elephant internist holding a stethoscope. Style: adorable chubby chibi animal, large rounded head, small body, tiny dot eyes, soft rounded dark brown outlines, flat pastel colors with subtle paper texture, friendly collectible sticker illustration, cream white coat unless scrubs specified. Full body centered with generous 12% margin, very simple pure ivory background, no text, no letters, no watermark, no logo, no border, no human, no realistic anatomy, no blood. Readable at 200px. Square composition.",
+      "source": "/Users/drshin/.codex/generated_images/01a10564-f65f-7e73-a23b-f85851185f6c/exec-51001681-ae4a-4d54-9fc5-00451deb7a2c.png"
+    },
+    {
+      "slug": "eye",
+      "specialty": "안과",
+      "prompt": "Use case: stylized-concept. Asset type: square animal doctor character illustration for a playful Korean quiz result card. Single character: a bright eagle ophthalmologist holding a simple eye chart with shapes, no letters. Style: adorable chubby chibi animal, large rounded head, small body, tiny dot eyes, soft rounded dark brown outlines, flat pastel colors with subtle paper texture, friendly collectible sticker illustration, cream white coat unless scrubs specified. Full body centered with generous 12% margin, very simple pure ivory background, no text, no letters, no watermark, no logo, no border, no human, no realistic anatomy, no blood. Readable at 200px. Square composition.",
+      "source": "/Users/drshin/.codex/generated_images/01a10564-f65f-7e73-a23b-f85851185f6c/exec-e8f02a1c-8ed6-4536-a005-651dfd0340e8.png"
+    },
+    {
+      "slug": "obgyn",
+      "specialty": "산부인과",
+      "prompt": "Use case: stylized-concept. Asset type: square animal doctor character illustration for a playful Korean quiz result card. Single character: a caring kangaroo obstetrician holding a swaddled baby kangaroo. Style: adorable chubby chibi animal, large rounded head, small body, tiny dot eyes, soft rounded dark brown outlines, flat pastel colors with subtle paper texture, friendly collectible sticker illustration, cream white coat unless scrubs specified. Full body centered with generous 12% margin, very simple pure ivory background, no text, no letters, no watermark, no logo, no border, no human, no realistic anatomy, no blood. Readable at 200px. Square composition.",
+      "source": "/Users/drshin/.codex/generated_images/01a10564-f65f-7e73-a23b-f85851185f6c/exec-aede342b-a4d5-429f-9a0a-8360b41af6ae.png"
+    },
+    {
+      "slug": "ortho",
+      "specialty": "정형외과",
+      "prompt": "Use case: stylized-concept. Asset type: square animal doctor character illustration for a playful Korean quiz result card. Single character: a sturdy panda orthopedic doctor holding a simple bone model. Style: adorable chubby chibi animal, large rounded head, small body, tiny dot eyes, soft rounded dark brown outlines, flat pastel colors with subtle paper texture, friendly collectible sticker illustration, cream white coat unless scrubs specified. Full body centered with generous 12% margin, very simple pure ivory background, no text, no letters, no watermark, no logo, no border, no human, no realistic anatomy, no blood. Readable at 200px. Square composition.",
+      "source": "/Users/drshin/.codex/generated_images/01a10564-f65f-7e73-a23b-f85851185f6c/exec-efa7c0ae-0f6e-4655-82f7-f60f780f762a.png"
+    },
+    {
+      "slug": "skin",
+      "specialty": "피부과",
+      "prompt": "Use case: stylized-concept. Asset type: square animal doctor character illustration for a playful Korean quiz result card. Single character: a neat white cat dermatologist holding a small skincare bottle without label. Style: adorable chubby chibi animal, large rounded head, small body, tiny dot eyes, soft rounded dark brown outlines, flat pastel colors with subtle paper texture, friendly collectible sticker illustration, cream white coat unless scrubs specified. Full body centered with generous 12% margin, very simple pure ivory background, no text, no letters, no watermark, no logo, no border, no human, no realistic anatomy, no blood. Readable at 200px. Square composition.",
+      "source": "/Users/drshin/.codex/generated_images/01a10564-f65f-7e73-a23b-f85851185f6c/exec-0e888604-e25c-4589-8353-f80ce7d1cba4.png"
+    },
+    {
+      "slug": "anesthesia",
+      "specialty": "마취통증의학과",
+      "prompt": "Use case: stylized-concept. Asset type: square animal doctor character illustration for a playful Korean quiz result card. Single character: a calm koala anesthesiologist beside a tiny monitor with a gentle waveform. Style: adorable chubby chibi animal, large rounded head, small body, tiny dot eyes, soft rounded dark brown outlines, flat pastel colors with subtle paper texture, friendly collectible sticker illustration, cream white coat unless scrubs specified. Full body centered with generous 12% margin, very simple pure ivory background, no text, no letters, no watermark, no logo, no border, no human, no realistic anatomy, no blood. Readable at 200px. Square composition.",
+      "source": "/Users/drshin/.codex/generated_images/01a10564-f65f-7e73-a23b-f85851185f6c/exec-8e87e2e7-b24c-41b3-a97c-7c685b2a5468.png"
+    },
+    {
+      "slug": "ent",
+      "specialty": "이비인후과",
+      "prompt": "Use case: stylized-concept. Asset type: square animal doctor character illustration for a playful Korean quiz result card. Single character: a friendly long-eared rabbit ENT doctor holding an otoscope. Style: adorable chubby chibi animal, large rounded head, small body, tiny dot eyes, soft rounded dark brown outlines, flat pastel colors with subtle paper texture, friendly collectible sticker illustration, cream white coat unless scrubs specified. Full body centered with generous 12% margin, very simple pure ivory background, no text, no letters, no watermark, no logo, no border, no human, no realistic anatomy, no blood. Readable at 200px. Square composition.",
+      "source": "/Users/drshin/.codex/generated_images/01a10564-f65f-7e73-a23b-f85851185f6c/exec-17b38ff6-f27d-4664-af0e-312f7248f0cf.png"
+    }
+  ]
+}
