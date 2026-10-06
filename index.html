@@ -485,18 +485,53 @@ function result(shared=false){
  const {type,key,trait}=currentResult,r=results[key];
  const cardNumber=Object.entries(routes).flatMap(([t,options])=>options.map(([k])=>({type:t,key:k}))).findIndex(v=>v.type===type&&v.key===key)+1;
  const tags={care:['마음 먼저','다정한 한마디'],analysis:['호기심 가득','디테일 발견'],plan:['차근차근','든든한 존재'],action:['현장에 진심','일단 해보자']}[trait];
- show(`<div class="result-layout"><section class="doctor-card" data-trait="${trait}" aria-label="진료과 결과 카드"><div class="card-topline"><span>DOCTOR TYPE</span><span class="card-stamp">MY DOCTOR CARD</span></div><div class="character-stage" aria-hidden="true"><span class="spark one">✧</span><div class="character-disc"><img src="assets/characters/${specialtyCharacters[r[1]]}.webp" alt="" width="240" height="240" decoding="async"></div><span class="spark two">✦</span></div><div class="eyebrow">${shared?'친구에게 어울리는 진료과는':'나에게 어울리는 진료과는'}</div><h1>${r[1]}</h1><p class="nickname">${r[2]}</p><div class="card-tags">${tags.map(tag=>`<span>#${tag}</span>`).join('')}</div><div class="card-bottomline"><span>Dr. JP의 닥터 도감</span><span>No. ${String(cardNumber).padStart(2,'0')} · 재미로 보는 결과</span></div></section><div class="share-area"><button id="share-button" class="primary" onclick="shareResult()">친구한테 내 카드 공유하기 ↗</button><p>친구는 어떤 과일까? 우리 결과를 비교해봐요.</p><p id="share-status" role="status" aria-live="polite"></p><textarea id="share-copy" aria-label="공유할 내용" readonly hidden style="width:100%;min-height:120px;padding:12px;font:inherit;border:1px solid #dfe7dc;border-radius:12px"></textarea></div><section class="story-card"><h2>이런 의사 캐릭터, 바로 당신!</h2>${r[3].map((paragraph,i)=>`<div class="story-block"><h3>${['🌱 나를 닮은 성향','🩺 진료실 속 나의 모습','💬 동료가 보는 나'][i]}</h3><p>${paragraph}</p></div>`).join('')}<p class="fine">재미로 연결한 의사 캐릭터예요.<br>실제 적성이나 진로를 판단하는 근거가 아닙니다.</p></section>${shared?'':optionalProfile()}<div class="result-actions"><button class="primary secondary" onclick="restart()">${shared?'나도 내 진료과 알아보기 →':'다시 해보기 ↻'}</button>${shared?'':'<button class="back" onclick="step=11;question()">← 마지막 답변 바꾸기</button>'}</div>${usageFooter()}</div>`);
+ show(`<div class="result-layout"><section class="doctor-card" data-trait="${trait}" aria-label="진료과 결과 카드"><div class="card-topline"><span>DOCTOR TYPE</span><span class="card-stamp">MY DOCTOR CARD</span></div><div class="character-stage" aria-hidden="true"><span class="spark one">✧</span><div class="character-disc"><img src="assets/characters/${specialtyCharacters[r[1]]}.webp" alt="" width="240" height="240" decoding="async"></div><span class="spark two">✦</span></div><div class="eyebrow">${shared?'친구에게 어울리는 진료과는':'나에게 어울리는 진료과는'}</div><h1>${r[1]}</h1><p class="nickname">${r[2]}</p><div class="card-tags">${tags.map(tag=>`<span>#${tag}</span>`).join('')}</div><div class="card-bottomline"><span>Dr. JP의 닥터 도감</span><span>No. ${String(cardNumber).padStart(2,'0')} · 재미로 보는 결과</span></div></section><div class="share-area"><button id="save-card-button" class="primary" onclick="saveCard()">내 카드 저장하기 ↓</button><p id="save-card-status" role="status" aria-live="polite"></p><button id="share-button" class="primary secondary" onclick="shareResult()">친구한테 공유하기 ↗</button><p>친구는 어떤 과일까? 우리 결과를 비교해봐요.</p><p id="share-status" role="status" aria-live="polite"></p><textarea id="share-copy" aria-label="공유할 내용" readonly hidden style="width:100%;min-height:120px;padding:12px;font:inherit;border:1px solid #dfe7dc;border-radius:12px"></textarea></div><section class="story-card"><h2>이런 의사 캐릭터, 바로 당신!</h2>${r[3].map((paragraph,i)=>`<div class="story-block"><h3>${['🌱 나를 닮은 성향','🩺 진료실 속 나의 모습','💬 동료가 보는 나'][i]}</h3><p>${paragraph}</p></div>`).join('')}<p class="fine">재미로 연결한 의사 캐릭터예요.<br>실제 적성이나 진로를 판단하는 근거가 아닙니다.</p></section>${shared?'':optionalProfile()}<div class="result-actions"><button class="primary secondary" onclick="restart()">${shared?'나도 내 진료과 알아보기 →':'다시 해보기 ↻'}</button>${shared?'':'<button class="back" onclick="step=11;question()">← 마지막 답변 바꾸기</button>'}</div>${usageFooter()}</div>`);
  loadUsage(shared);
  if(!shared)bindOptionalProfile();
 }
 
+async function saveCard(){
+ const button=document.getElementById('save-card-button'),status=document.getElementById('save-card-status');
+ const card=document.querySelector('.doctor-card');
+ if(!card||button.disabled)return;
+ button.disabled=true;status.textContent='카드 이미지 만드는 중…';
+ try{
+  const source=card.querySelector('img');
+  await source.decode();
+  if(document.fonts)await document.fonts.ready;
+  const canvas=document.createElement('canvas');canvas.width=900;canvas.height=1140;
+  const ctx=canvas.getContext('2d');
+  const style=getComputedStyle(card),tint=style.getPropertyValue('--tint').trim(),ink=style.getPropertyValue('--ink').trim();
+  ctx.fillStyle=tint;ctx.fillRect(0,0,900,1140);
+  const text=(value,x,y,size,color=ink,align='center')=>{ctx.font=`${size}px system-ui, -apple-system, sans-serif`;ctx.fillStyle=color;ctx.textAlign=align;ctx.fillText(value,x,y);};
+  text('DOCTOR TYPE',55,70,22,ink,'left');text('MY DOCTOR CARD',845,70,22,ink,'right');
+  ctx.fillStyle='#fffdf7';ctx.beginPath();ctx.roundRect(200,125,500,500,55);ctx.fill();
+  ctx.save();ctx.clip();ctx.drawImage(source,200,125,500,500);ctx.restore();
+  text('✧',145,210,44);text('✦',757,555,44);
+  text(card.querySelector('.eyebrow').textContent,450,695,26);
+  text(card.querySelector('h1').textContent,450,775,58,'#293e35');
+  const nickname=card.querySelector('.nickname').textContent;
+  let size=30;ctx.font=`${size}px system-ui, sans-serif`;
+  while(ctx.measureText(nickname).width>790&&size>18){size--;ctx.font=`${size}px system-ui, sans-serif`;}
+  text(nickname,450,840,size);
+  text([...card.querySelectorAll('.card-tags span')].map(el=>el.textContent).join('   '),450,913,25);
+  ctx.strokeStyle=ink;ctx.globalAlpha=.25;ctx.setLineDash([6,7]);ctx.beginPath();ctx.moveTo(55,985);ctx.lineTo(845,985);ctx.stroke();ctx.globalAlpha=1;
+  const footer=card.querySelectorAll('.card-bottomline span');
+  text(footer[0].textContent,55,1040,20,ink,'left');text(footer[1].textContent,845,1040,20,ink,'right');
+  text('docjunpro.github.io/Doctor-type',450,1095,19);
+  const blob=await new Promise(resolve=>canvas.toBlob(resolve,'image/png'));
+  if(!blob)throw new Error('Image export failed');
+  const url=URL.createObjectURL(blob),link=document.createElement('a');
+  link.href=url;link.download=`닥터타입-${card.querySelector('h1').textContent}.png`;
+  document.body.append(link);link.click();link.remove();setTimeout(()=>URL.revokeObjectURL(url),60000);
+  status.textContent='카드 이미지를 다운로드했어요. 다운로드 목록에서 확인해주세요.';
+ }catch{status.textContent='이미지를 저장하지 못했어요. 잠시 후 다시 눌러주세요.';}
+ finally{button.disabled=false;}
+}
 function shareData(){
- const {type,key}=currentResult;
- const text=`내 닥터 타입은 ${results[key][1]}! 🩺 너는 어떤 과가 나올까? 12문항으로 알아보자. (재미용 테스트)`;
+ const url=new URL(location.href);url.search='';url.hash='';
  const local=location.protocol==='file:'||/^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname);
- if(local)return {title:'닥터 타입 — 나에게 어울리는 진료과',text,local:true};
- const url=new URL(location.href);url.search='';const id=Object.entries(routes).flatMap(([t,options])=>options.map(([k])=>({type:t,key:k}))).findIndex(r=>r.type===type&&r.key===key);url.hash=new URLSearchParams({result:String(id+1)}).toString();
- return {title:'닥터 타입 — 나에게 어울리는 진료과',text,url:url.href,local:false};
+ return {title:'닥터 타입 — 나에게 어울리는 진료과',text:'내가 의사라면 어떤 과가 어울릴까? 12문항으로 알아보자! (재미용 테스트)',url:local?'https://docjunpro.github.io/Doctor-type/':url.href,local:false};
 }
 async function shareResult(){
  const button=document.getElementById('share-button'),status=document.getElementById('share-status'),box=document.getElementById('share-copy');
@@ -511,10 +546,10 @@ async function shareResult(){
   try{
    if(!navigator.clipboard?.writeText)throw new Error('Clipboard unavailable');
    await navigator.clipboard.writeText(content);
-   status.textContent=local?'결과 문구를 복사했어요. 친구가 접속할 링크는 사이트 공개 후 함께 포함됩니다.':'결과와 링크를 복사했어요. 친구에게 붙여넣어 보내세요!';
+   status.textContent=local?'결과 문구를 복사했어요. 친구가 접속할 링크는 사이트 공개 후 함께 포함됩니다.':'테스트 링크를 복사했어요. 친구에게 붙여넣어 보내세요!';
   }catch{
    box.hidden=false;box.value=content;box.focus();box.select();
-   status.textContent=local?'아래 결과 문구를 직접 복사해주세요. 친구가 접속할 링크는 사이트 공개 후 포함됩니다.':'자동 복사가 어려워요. 아래 결과와 링크를 직접 복사해주세요.';
+   status.textContent=local?'아래 결과 문구를 직접 복사해주세요. 친구가 접속할 링크는 사이트 공개 후 포함됩니다.':'자동 복사가 어려워요. 아래 테스트 링크를 직접 복사해주세요.';
   }
  }finally{button.disabled=false;}
 }
